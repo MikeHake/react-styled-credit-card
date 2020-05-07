@@ -1,0 +1,32 @@
+/* 
+ * Force every element, and psuedo-element to inherit box-sizing from parent, 
+ * which will come from the body selector below. 
+ * This is considered a CSS best practice
+ */
+ *,
+ *::after,
+ *::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit; 
+ }
+ 
+ html {
+   /* Set root font size that will be used for all other 
+     * reletive sizing throught.  
+     * Default browser font size is 16px. 62.5% of 16px = 10px, so
+     * 1rem will = 10px.
+     * pixels should not be specified directly anywhere. Everything needs
+     * to be relative. This allows entire app to resize correctly if user changes
+     * default browser font size, and at mobile break points */
+   font-size: 62.5%; 
+ }
+ 
+ body {
+   box-sizing: border-box; 
+   font-family: "Lato", "sans-serif";
+   font-weight: 400;
+   line-height: 1.7;
+   color: #777;
+   padding: 3rem; 
+ }
